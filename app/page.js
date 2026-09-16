@@ -1,0 +1,51 @@
+import { ArrowRight, BarChart3, BriefcaseBusiness, Database, Github, Linkedin, Mail, MapPin, Network, Sparkles } from 'lucide-react';
+
+const capabilities = [
+  ['Business Analysis','Requirements, BRD/FRD/SRS, user stories, UAT, BPMN and gap analysis', BriefcaseBusiness],
+  ['Data Analytics','SQL, Python, Power BI, Tableau, Excel and KPI reporting', BarChart3],
+  ['Banking & Trade Finance','Trade Finance, LoanIQ, MQ messaging and transaction processing', Network],
+  ['AI & Automation','AI agents, RAG, n8n, Relevance AI and AI-augmented BA workflows', Sparkles],
+];
+const experience = [
+  ['Jun 2024 - Present','Independent Consultant','Business & Data Analytics','Five client engagements spanning healthcare data, fintech, wellness and operations.'],
+  ['Jun 2022 - Jun 2024','Bank of America Continuum India','Analyst, Trade Finance & BAU','Requirements, integration delivery, UAT, data validation and production support across critical banking applications.'],
+  ['May 2021 - Oct 2021','Siemens','Data Analyst Intern','Operational data analysis and KPI dashboards that reduced manual reporting effort.'],
+  ['Oct 2019 - May 2020','DevLogic Technologies','Software Development Intern','Java and SQL backend modules in an Agile delivery environment.'],
+];
+const clientWork = [
+  ['Healthcare Data Quality','~250K records / batch','Automated validation and exception reporting reduced review turnaround from 6 hours to 2.5 hours.','Python • SQL • Power BI'],
+  ['Infinity Fitness Studios','25+ KPIs','Retention, cohort and utilization analysis identified a three-month attrition pattern.','SQL • Python • Power BI'],
+  ['ReferMe Investments','28 KPIs','Structured investment evaluation across five dimensions with a proposed 0-100 decision-support framework.','Analytics • Power BI'],
+  ['The GlamSquad Salon','+15% profit','Root-cause analysis of profitability, appointment flow and service mix supported measurable improvement.','BA • Process • Power BI'],
+  ['Maintenance Operations','92% observed completion','Analyzed ~10K records across 20 teams and eliminated 3-4 hours of weekly manual reporting.','BA • Data • Power BI'],
+];
+const projects = [
+  ['CareerIQ AI','Multi-agent job-search and interview intelligence workflow using Relevance AI and n8n.'],
+  ['WTO Trade Intelligence Assistant','RAG assistant using Gemini, ChromaDB, embeddings and Streamlit.'],
+  ['E-Commerce Revenue Optimization','Funnel, cohort and RFM analysis identified a 35% checkout drop-off and informed an experimentation roadmap.'],
+  ['Real-Time Pipeline & Churn Analysis','Python and SQL pipeline with churn modeling across a 50K+ row telecom dataset.'],
+  ['Trade Finance Exception Control Platform','Synthetic BA simulation covering exception monitoring, reconciliation, controls, RTM and UAT.'],
+  ['Healthcare Payer Portal Automation','Synthetic BA simulation standardizing multi-portal workflows, rules, exceptions and human-review boundaries.'],
+];
+
+export default function Home(){return <main>
+  <nav className="nav"><a className="brand" href="#home"><b>CS</b><span>Chinmayee Surwade<small>ANALYSE • IMPROVE • DELIVER</small></span></a><div className="links"><a href="#about">About</a><a href="#experience">Experience</a><a href="#work">Client Work</a><a href="#projects">Portfolio</a><a href="#skills">Skills</a><a href="#contact">Contact</a></div><a className="button small disabled" href="#resume">Resume soon</a></nav>
+
+  <section id="home" className="hero section"><div className="hero-copy"><p className="eyebrow">BUSINESS ANALYST <i/> DATA ANALYST</p><h1>Turning Data into<br/>Meaningful <span>Impact.</span></h1><p className="lead">Business & Data Analyst with 4+ years across banking operations and independent consulting. I combine business analysis, process improvement and analytics to turn complex problems into decisions teams can act on.</p><div className="actions"><a className="button" href="#work">Explore My Work <ArrowRight size={17}/></a><a className="button ghost" href="#contact">Connect</a></div><p className="location"><MapPin size={16}/> Chennai, India • Open to Relocate • Immediate Joiner</p><div className="social"><a aria-label="LinkedIn" href="https://www.linkedin.com/in/chinmayeesurwade/" target="_blank"><Linkedin/></a><a aria-label="GitHub" href="https://github.com/chinmayeesurwade" target="_blank"><Github/></a><a aria-label="Email" href="mailto:chinmayee.surwade@gmail.com"><Mail/></a></div></div><div className="hero-panel"><div className="orb"><Database size={62}/><strong>Business × Data</strong><span>Banking • Analytics • AI</span></div><div className="cap-list"><span>Requirements & UAT</span><span>SQL & Analytics</span><span>Process Improvement</span><span>Trade Finance</span></div></div></section>
+
+  <section className="stats"><div><strong>4+</strong><span>Years Experience</span></div><div><strong>5</strong><span>Client Engagements</span></div><div><strong>30%</strong><span>UAT Defect Reduction</span></div><div><strong>99%</strong><span>On-Time Batch Completion</span></div></section>
+
+  <section id="about" className="section"><p className="eyebrow">ABOUT ME</p><h2>Analytical. Curious. <span>Impact-Driven.</span></h2><p className="section-intro">I work at the intersection of business requirements, processes and data. My experience ranges from trade finance systems at a global bank to independent analytics engagements where I translate ambiguous business questions into structured analysis, dashboards and actionable recommendations.</p><div className="grid four">{capabilities.map(([t,d,I])=><article className="card" key={t}><I/><h3>{t}</h3><p>{d}</p></article>)}</div></section>
+
+  <section id="experience" className="section alt"><p className="eyebrow">PROFESSIONAL EXPERIENCE</p><h2>Experience built around <span>delivery.</span></h2><div className="timeline">{experience.map(([date,org,role,desc])=><article key={org}><div className="dot"/><small>{date}</small><h3>{org}</h3><b>{role}</b><p>{desc}</p></article>)}</div></section>
+
+  <section id="work" className="section"><p className="eyebrow">INDEPENDENT CLIENT WORK</p><h2>Problems investigated. <span>Decisions improved.</span></h2><p className="section-intro">Selected independent engagements. Client-sensitive data is excluded; metrics below reflect verified project outcomes or observed dataset measures.</p><div className="grid work-grid">{clientWork.map(([t,m,d,tools])=><article className="work-card" key={t}><div className="metric">{m}</div><h3>{t}</h3><p>{d}</p><small>{tools}</small><a href="#contact">Case study <ArrowRight size={15}/></a></article>)}</div></section>
+
+  <section id="projects" className="section alt"><p className="eyebrow">TECHNICAL & BA PORTFOLIO</p><h2>Beyond dashboards: <span>systems thinking.</span></h2><div className="grid projects">{projects.map(([t,d],i)=><article className="project" key={t}><span>0{i+1}</span><h3>{t}</h3><p>{d}</p></article>)}</div></section>
+
+  <section id="skills" className="section"><p className="eyebrow">SKILLS & TOOLKIT</p><h2>From requirements to <span>evidence.</span></h2><div className="skill-groups"><div><h3>Business Analysis</h3><p>Requirements Gathering • Stakeholder Management • BRD • FRD • SRS • User Stories • Acceptance Criteria • UAT • Gap Analysis • BPMN • Use Cases • DFD</p></div><div><h3>Data & Engineering</h3><p>SQL • Python • Java • Power BI • Tableau • Advanced Excel • SQL Server • Oracle • ETL/ELT Concepts • Data Validation</p></div><div><h3>Delivery & Banking</h3><p>Jira • Azure DevOps • Confluence • Visio • Lucidchart • Agile • Waterfall • SDLC • Trade Finance • LoanIQ • MQ Messaging</p></div><div><h3>AI & Automation</h3><p>Multi-Agent Systems • Relevance AI • n8n • Prompt Engineering • RAG • ChromaDB • AI-Augmented BA Workflows</p></div></div></section>
+
+  <section id="contact" className="cta"><p className="eyebrow">LET'S CONNECT</p><h2>Let’s Create <span>Impact Together.</span></h2><p>Open to Business Analyst, Data Analyst and Technical BA opportunities.</p><div className="actions center"><a className="button" href="mailto:chinmayee.surwade@gmail.com"><Mail size={17}/> Email Me</a><a className="button ghost" href="mailto:chinmayee.surwade@gmail.com?subject=Phone%20Number%20Request&body=Hi%20Chinmayee%2C%0A%0AI%27d%20like%20to%20request%20your%20phone%20number%20regarding%20an%20opportunity.%0A">Request Phone Number</a></div></section>
+
+  <footer><b>CS</b><span>© 2026 Chinmayee Surwade</span><span>Business Analyst • Data Analyst</span></footer>
+</main>}
